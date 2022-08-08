@@ -3,9 +3,8 @@
 
 ## Linked List
 Singly Linked List has head with a value and a pointer pointed to the next node, for each node there are a value and a pointer pointed to the next node.
-![linked-list](https://www.geeksforgeeks.org/data-structures/linked-list/)
 
-Typical quesionts for Linked-list are:
+Typical operations for Linked-list are:
 - merge two Linked-list (LeetCode:21)
 
 ```c
