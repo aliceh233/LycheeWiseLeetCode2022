@@ -5,6 +5,8 @@ Made in China
 
 A notebook for coding starter. I will never stop learning coding!
 
+[The whole content is inside this link.](LycheeWiseNoteBook2022.md)
+
 ## Version History
 
 - Aug.7.2022 Setup
