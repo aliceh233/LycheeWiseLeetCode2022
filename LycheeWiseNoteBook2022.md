@@ -4,8 +4,8 @@
 ## Linked List
 Singly Linked List has head with a value and a pointer pointed to the next node, for each node there are a value and a pointer pointed to the next node.
 
-Typical operations for Linked-list are:
-- merge two Linked-list (LeetCode:21)
+### Leetcode for Linked-list:
+- merge two Singly Linked-list (LeetCode:21)
 
 ```c
 /**
@@ -69,6 +69,73 @@ struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2){
     return head.next;
 }
 ```
+
+- merge k sorted linked-list array (Leetcode: 23): that's a smart solution from *zhazhalaila*
+```c
+// This solution is so smart and has only 20ms runtime, Zhazhalaila did it by comparing all the nodelist pairs by pairs. its algorithm is similar to merge sort. 
+
+//his/her/their instructions:
+/*
+Recursive and resursive to solve this problem.
+We can imagine construct a binary tree to absorb recursion.
+                       result
+					   /     \
+					  A       B
+					 / \      / \
+					C   D    E   F
+At the begin, we merge C and D to get CD. Then we merge CD and A to get ACD. Then we merge E and F to get EF. Then we merge EF and B to get BEF. Last, we merge ACD and BEF to get result.
+*/
+
+typedef struct ListNode Node;
+Node* partion(Node** lists, int start, int end);
+Node* mergeTwoLists(Node* l1, Node* l2);
+
+struct ListNode* mergeKLists(struct ListNode** lists, int listsSize) {
+    //compare all lists from 0 to the end.
+    return partion(lists, 0, listsSize-1);
+}
+
+Node* partion(Node** lists, int start, int end) {
+    //if start is the end, that means there is only one list in this list, return that list.
+    if (start == end)
+        return lists[start];
+    // if there is still much list we need to sort:
+    if (start < end) {
+        //define where is the middle point
+        int middle = (start + end) / 2;
+        //operate left lists recursively
+        Node* l1 = partion(lists, start, middle);
+        //operate right lists recursively 
+        Node* l2 = partion(lists, middle+1, end);
+        //now merge two sorted link-list
+        return mergeTwoLists(l1, l2);
+    } else {
+        return NULL;
+    }
+}
+
+Node* mergeTwoLists(struct ListNode* l1, struct ListNode* l2) {
+    //base cases
+    if(l1 == NULL && l2 == NULL)
+        return NULL;
+    if (l1 == NULL)
+        return l2;
+    if (l2 == NULL)
+        return l1;
+    //a temp node
+    Node* new_node;
+    //if l1's value is bigger or equal to l2, then assign the temp value as l2, the next value will be compare with l1 recursively
+    if (l1->val >= l2->val) {
+        new_node = l2;
+        new_node->next = mergeTwoLists(l1, l2->next);
+    } else {
+        new_node = l1;
+        new_node->next = mergeTwoLists(l1->next, l2);
+    }
+    return new_node;
+}
+```
+
 
 Linked List have different transformations as following:
 
