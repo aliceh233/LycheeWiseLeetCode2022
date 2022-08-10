@@ -5,8 +5,7 @@
 Singly Linked List has head with a value and a pointer pointed to the next node, for each node there are a value and a pointer pointed to the next node.
 
 ### Leetcode for Linked-list:
-- [merge two Singly Linked-list(LeetCode:21)](#merge_two_Singly_linked-list)
-- [merge k sorted linked-list array (Leetcode: 23)](#merge_k_sorted_linked-list_array_(Leetcode: 23))
+- merge two Singly Linked-list(LeetCode:21)
 
 #### Merge Two Singly Linked-list
 ```c
@@ -73,7 +72,7 @@ struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2){
 }
 ```
 
-#### merge k sorted linked-list array (Leetcode: 23)
+- merge k sorted linked-list array (Leetcode: 23)
 ```c
 //  that's a smart solution from zhazhalaila. It has only 20ms runtime, Zhazhalaila did it by comparing all the nodelist pairs by pairs. its algorithm is similar to merge sort. 
 
