@@ -5,8 +5,10 @@
 Singly Linked List has head with a value and a pointer pointed to the next node, for each node there are a value and a pointer pointed to the next node.
 
 ### Leetcode for Linked-list:
-- merge two Singly Linked-list (LeetCode:21)
+- [merge two Singly Linked-list (LeetCode:21)](#merge_two_Singly_linked-list_(LeetCode:21))
+- [merge k sorted linked-list array (Leetcode: 23)](#merge_k_sorted_linked-list_array_(Leetcode: 23))
 
+#### merge two Singly Linked-list (LeetCode:21)
 ```c
 /**
  * Definition for singly-linked list.
@@ -70,9 +72,9 @@ struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2){
 }
 ```
 
-- merge k sorted linked-list array (Leetcode: 23): that's a smart solution from *zhazhalaila*
+#### merge k sorted linked-list array (Leetcode: 23)
 ```c
-// This solution is so smart and has only 20ms runtime, Zhazhalaila did it by comparing all the nodelist pairs by pairs. its algorithm is similar to merge sort. 
+//  that's a smart solution from zhazhalaila. It has only 20ms runtime, Zhazhalaila did it by comparing all the nodelist pairs by pairs. its algorithm is similar to merge sort. 
 
 //his/her/their instructions:
 /*
@@ -137,7 +139,7 @@ Node* mergeTwoLists(struct ListNode* l1, struct ListNode* l2) {
 ```
 
 
-Linked List have different transformations as following:
+### Linked List have different transformations as following:
 
 - Double Linked List: Double Linked List has a head pointed to next node, for each node there are a value, a pointer pointed to the last node, and a pointer pointed to the next node.
 - Static List
