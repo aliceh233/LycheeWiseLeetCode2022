@@ -6,8 +6,6 @@ Singly Linked List has head with a value and a pointer pointed to the next node,
 
 ### Leetcode for Linked-list:
 - merge two Singly Linked-list(LeetCode:21)
-
-#### Merge Two Singly Linked-list
 ```c
 // LeetCode:21
 /**
@@ -137,6 +135,8 @@ Node* mergeTwoLists(struct ListNode* l1, struct ListNode* l2) {
     return new_node;
 }
 ```
+- Operations on the reverse n-th number of linked-list
+
 
 
 ### Linked List have different transformations as following:

@@ -7,6 +7,10 @@ A notebook for coding starter. I will never stop learning coding!
 
 [The whole content is inside this link.](LycheeWiseNoteBook2022.md)
 
+Grateful appriciation to:
+[LABULADONG 的算法网站](https://labuladong.gitee.io/algo/)
+
+
 ## Version History
 
 - Aug.7.2022 Setup
